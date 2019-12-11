@@ -1,0 +1,133 @@
+html {
+  height: 100%;
+  width: 100%;
+  body {
+    height: 100%;
+    width: 100%;
+    > #root {
+      height: 100%;
+      width: 100%;
+      > .App {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    input[type="checkbox"] {
+      width: 1.5em;
+      height: 1.5em;
+    }
+    &.modal-open {
+      padding-right: unset !important;
+    }
+    .icons {
+      width: 1em;
+    }
+    div.modal-body.high {
+      height: 80vh;
+      #payment-form {
+        height: 100%;
+        > iframe {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+$header_card_height: 1.25em;
+$header_height: 4em;
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5em;
+  overflow-y: auto;
+  div.spiner_login {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+  }
+  div.login {
+    max-width: 100%;
+    min-width: 30%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > select {
+      margin-left: 25%;
+      width: 70%;
+      height: 2em;
+      border-radius: 0.5em;
+      text-align-last: center;
+    }
+    &.disable {
+      background-color: #0000001f;
+    }
+    form {
+      width: 100%;
+      padding: 1em;
+    }
+    .header {
+      font-size: 2em;
+      margin: 0.5em 1em;
+      text-align: center;
+    }
+    .personal_data {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        margin-right: 1em;
+      }
+    }
+
+    label {
+      display: flex;
+      margin-bottom: 1em;
+      div {
+        &.value {
+          width: 100%;
+        }
+        padding: 0.5em;
+        &:first-child {
+          width: 30%;
+        }
+      }
+    }
+  }
+  > .navbar {
+    position: absolute;
+    align-self: center;
+    left: 0;
+    height: calc(100vh - #{2 * $header_height});
+    display: flex;
+    align-items: flex-start;
+  }
+
+  *.list_cont {
+    display: flex;
+    margin-top: 1em;
+    max-width: 100vw;
+    flex-direction: row;
+    padding: 0.5em;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 #3e3e3e33;
+    border: 0.05em solid #999999;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+}
